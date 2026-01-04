@@ -10,6 +10,8 @@ This repository serves as a hub for various AI-driven projects, ranging from aut
 
 - **Modular AI Agent Framework**: A flexible architecture for building and orchestrating AI agents.
 - **Automated Data Analysis**: Built-in agents for performing statistical analysis and generating insights from datasets.
+- **Specialized Industry Agents**: Pre-built agents representing specific roles like a **Mechanic**, **Passenger**, and **Electronic Engineer** for domain-specific analysis.
+- **Self-Driving Simulation**: A full-stack autonomous driving simulation featuring **Perception**, **Path Planning**, and **Vehicle Control** agents.
 - **Scalable Workflows**: Easily define and run complex sequences of AI-driven tasks.
 
 ## Project Structure
@@ -21,10 +23,16 @@ AI-Driven-Solutions/
 │   │   ├── base_agent.py   # Abstract base class for agents
 │   │   └── orchestrator.py # Orchestration logic for agent workflows
 │   └── agents/             # Collection of specialized AI agents
+│       ├── data_analyzer.py # Agent for statistical data analysis
+│       ├── mechanic_agent.py # Agent for vehicle diagnostics│       ├── electronic_engineer_agent.py # Agent for system telemetry
+│       ├── perception_agent.py # Agent for environmental perception
+│       ├── planning_agent.py   # Agent for path planning
+│       ├── control_agent.py    # Agent for vehicle control
 │       └── data_analyzer.py # Agent for statistical data analysis
 ├── main.py                 # Entry point for demonstrating the framework
-├── README.md               # Project documentation
-├── LICENSE                 # MIT License
+├── vehicle_demo.py         # Multi-agent demo for vehicle scenarios
+├── self_driving_demo.py    # Full-stack self-driving simulation demo
+├── README.md               # Project documentation LICENSE                 # MIT License
 └── .gitignore              # Git ignore rules
 ```
 
@@ -60,6 +68,16 @@ AI-Driven-Solutions/
 To see the AI agent framework in action, run the `main.py` script:
 ```bash
 python main.py
+```
+
+To see the multi-perspective vehicle diagnostic demo:
+```bash
+python vehicle_demo.py
+```
+
+To run the full-stack self-driving simulation:
+```bash
+python self_driving_demo.py
 ```
 
 ## Contributing
