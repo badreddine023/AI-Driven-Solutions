@@ -22,14 +22,14 @@ class ElectronicEngineerAgent(BaseAgent):
         system_status = "Healthy"
         alerts = []
         
-        if voltage < 11.5:
-            system_status = "Critical"
-            alerts.append("Low battery voltage detected. Potential alternator failure.")
-            
         if sensor_errors:
             system_status = "Degraded"
             for error in sensor_errors:
                 alerts.append(f"Sensor Error: {error}")
+
+        if voltage < 11.5:
+            system_status = "Critical"
+            alerts.append("Low battery voltage detected. Potential alternator failure.")
                 
         if cpu_load > 90:
             alerts.append("High CPU load on infotainment system. Potential software lag.")
